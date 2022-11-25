@@ -1,0 +1,35 @@
+@media only screen and (max-width: 800px){
+    html{
+        font-size: 12px;
+    }
+}
+
+/* header and hero */
+@media only screen and (max-width: 625px){
+    #header .nav{
+        display: none;
+    }
+    #hero .hero{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    #hero .sec_heading{
+        font-size: 2rem;
+        text-align: center;
+    }
+    #hero .sec_sub_heading{
+        text-align: center;
+    }
+    #hero .buttons{
+        justify-content: center;
+    }
+}
+
+/* service */
+@media only screen and (max-width: 645px){
+    #service .service_container{
+        gap: 2rem;
+    }
+}

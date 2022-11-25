@@ -9,6 +9,7 @@
     scroll-behavior: smooth;
     transition: ease .3s;
     font-family: Montserrat;
+    color: var(--dark);
 }
 
 html{
@@ -27,7 +28,7 @@ section{
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 5rem 1rem;
 }
 
 .sec_heading{
@@ -36,14 +37,25 @@ section{
     text-transform: capitalize;
     letter-spacing: .1rem;
     color: var(--clr1);
+    text-align: center;
 }
 
 .sec_sub_heading{
     font-size: 1.2rem;
     font-weight: 500;
+    text-align: center;
+}
+
+.sec_image{
+    width: 35rem;
 }
 
 /* buttons */
+.buttons{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+}
 .button{
     background-color: transparent;
     color: var(--clr1);
@@ -76,22 +88,22 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: .3rem 1rem;
+    padding: .5rem 1rem;
 }
 #header img{
-    width: 10rem;
+    width: 100%;
+    max-width: 10rem;
 }
-#header nav{
+#header .nav{
     display: flex;
     align-items: center;
     gap: 3rem;
 }
-#header nav ul{
+#header .nav ul{
     display: flex;
     gap: 2rem;
 }
 #header li a{
-    color: var(--dark);
     font-weight: 500;
     border-bottom: solid 2px transparent;
     padding: .1rem .2rem;
@@ -108,6 +120,7 @@ section{
     background-image: linear-gradient(45deg, var(--clr2), var(--clr3), var(--light));
     overflow: hidden;
     height: 100vh;
+    min-height: 680px;
 }
 #hero .hero{
     background-image: url(/pictures/hero\ bg.svg);
@@ -115,14 +128,81 @@ section{
     height: 100%;
     align-items: center;
     justify-content: space-between;
+    margin-top: -3rem;
+    padding: 1rem;
 }
 #hero .hero_info{
-    width: 35rem;
+    width: 100%;
+    max-width: 35rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 #hero .sec_heading{
     font-size: 3rem;
+    text-align: start;
+}
+#hero .sec_sub_heading{
+    text-align: start;
 }
 /* hero section ends here */
+
+
+/* service section starts here */
+#service{
+    background-color: #F1FEFF;
+}
+#service .service_container{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+#service .icon_container{
+    background-color: var(--light);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+#service .icon_container img{
+    width: 3rem;
+}
+#service .service{
+    width: 15rem;
+    height: 18rem;
+    background-image: linear-gradient(45deg, var(--clr2), var(--clr3));
+    padding: 1.5rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+#service .service_heading{
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+/* service section ends here */
+
+
+/* about section starts here */
+#about{
+    background-color: #DDF0FF;
+}
+#about .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#about .about_info{
+    width: 40rem;
+    gap: 5rem;
+}
+/* about section ends here */
