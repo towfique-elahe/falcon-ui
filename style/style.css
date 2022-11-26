@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
+/* variables */
+:root{
+    --clr1: #08416D;
+    --clr2: #94C8F0;
+    --clr3: #A1D0D4;
+    --light: #FCFDFD;
+    --dark: #222831;
+    --shadow: #2228311a 0 0 10px 5px;
+}
+
+/* universal stuff */
 *{
     margin: 0;
     padding: 0;
@@ -74,19 +85,11 @@ section{
 .button:hover{
     background-color: var(--clr1);
     color: var(--light);
+    box-shadow: var(--shadow);
 }
 .action{
     background-color: var(--clr1);
     color: var(--light);
-}
-
-/* colors */
-:root{
-    --clr1: #08416D;
-    --clr2: #94C8F0;
-    --clr3: #A1D0D4;
-    --light: #FCFDFD;
-    --dark: #222831;
 }
 
 /* header starts here */
@@ -177,6 +180,7 @@ section{
 }
 #service .icon_container img{
     width: 3rem;
+    transition: ease .7s;
 }
 #service .service{
     width: 15rem;
@@ -189,11 +193,21 @@ section{
     align-items: center;
     text-align: center;
     gap: 1rem;
+    cursor: default;
+}
+#service .service:hover{
+    box-shadow: var(--shadow);
+}
+#service .service:hover img{
+    transform: rotate(360deg);
 }
 #service .service_heading{
     text-transform: capitalize;
     font-size: 1.1rem;
     font-weight: 600;
+}
+#service .button:hover{
+    padding: .5rem 2rem;
 }
 /* service section ends here */
 
@@ -206,6 +220,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 5rem;
 }
 #about .about_info{
     width: 100%;
@@ -245,6 +260,9 @@ section{
     background-color: #94c8f05d;
     cursor: default;
 }
+#pricing .plan:hover{
+    box-shadow: var(--shadow);
+}
 #pricing .plan_title{
     width: 100%;
     max-width: 10rem;
@@ -282,6 +300,10 @@ section{
     text-align: center;
     font-size: 1.2rem;
     letter-spacing: .2rem;
+}
+#pricing .button:hover{
+    margin-top: -1rem;
+    padding: 1.5rem 1rem;
 }
 #pricing table, #pricing td{
     border-collapse: collapse;
@@ -383,6 +405,7 @@ section{
 }
 #contact input:focus, #contact textarea:focus{
     background-color: var(--light);
+    box-shadow: var(--shadow);
 }
 #contact textarea{
     height: 5rem;
@@ -468,3 +491,66 @@ section{
     text-transform: uppercase;
 }
 /* footer ends here */
+
+
+
+/* login and register page starts here */
+#hero .log{
+    justify-content: center;
+    gap: 5rem;
+}
+#hero .form{
+    width: 100%;
+    max-width: 25rem;
+    background-color: #ffffff52;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+#hero .form .button{
+    width: 10rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: .5rem;
+}
+#hero .form .button:hover{
+    width: 100%;
+}
+#hero .button img{
+    width: 1.5rem;
+}
+/* #hero .form_top{
+    text-align: center;
+}
+#hero .form_top .sec_heading{
+    text-align: center;
+} */
+#hero .form_inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#hero .input{
+    display: flex;
+    flex-direction: column;
+}
+#hero .input input{
+    border: none;
+    outline: none;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border-radius: .5rem;
+    background-color: #08416d28;
+}
+#hero .input input:focus{
+    background-color: var(--light);
+    box-shadow: var(--shadow);
+}
+/* login and register page ends here */
