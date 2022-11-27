@@ -9,8 +9,10 @@
     <link rel="shortcut icon" href="./pictures/favicon.svg" type="image/x-icon">
     <!-- style file -->
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/auth.css">
     <!-- responsive syle file -->
     <link rel="stylesheet" href="./style/responsive.css">
+
 </head>
 
 <body>
@@ -47,19 +49,19 @@
                 <div class="form_inputs">
                     <div class="input">
                         <label for="name">Name</label>
-                        <input type="text" name="name" id="name">
+                        <input type="text" name="name" id="name" placeholder="John Wick" required>
                     </div>
                     <div class="input">
                         <label for="username">Username</label>
-                        <input type="text" name="username" id="username">
+                        <input type="text" name="username" id="username" placeholder="john_wick" required>
                     </div>
                     <div class="input">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email">
+                        <input type="email" name="email" id="email" placeholder="johnwick@email.com" required>
                     </div>
                     <div class="input">
                         <label for="password">Password</label>
-                        <input type="password" name="password" id="password">
+                        <input type="password" name="password" id="password" placeholder="********" required>
                     </div>
                     <p>Have an account? Go to <a href="./login.html">Login</a></p>
                 </div>
