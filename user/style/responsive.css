@@ -1,0 +1,48 @@
+/* master layout stats here */
+@media only screen and (max-width: 800px){
+    html{
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 900px){
+    #sidebar{
+        width: 200px;
+    }
+    #sidebar nav a, #sidebar .sidebar_bottom a{
+        gap: .5rem;
+    }
+    #sidebar nav a:hover, #sidebar .sidebar_bottom a:hover, #sidebar .active{
+        gap: .5rem;
+    }
+}
+@media only screen and (max-width: 575px){
+    .container{
+        padding: .5rem;
+        gap: .5rem;
+    }
+    #sidebar{
+        width: fit-content;
+        padding: .5rem;
+    }
+    #sidebar a span, #sidebar .logo{
+        display: none;
+    }
+    #topbar{
+        padding: .5rem;
+        align-items: center;
+    }
+    #topbar .user{
+        gap: .5rem;
+    }
+    #topbar .user img{
+        width: 30px;
+        height: 30px;
+    }
+    #topbar .page_title{
+        font-size: 1.5rem;
+    }
+    #topbar .msg{
+        display: none;
+    }
+}
+/* master layout ends here */
