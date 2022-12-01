@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="./pictures/favicon.svg" type="image/x-icon">
     <!-- stylesheets -->
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/responsive.css">
 </head>
 
 <body>
@@ -21,28 +22,32 @@
                     <ul>
                         <li>
                             <a href="./dashboard.html">
-                                <img src="./pictures/dashboard-icon.svg" alt=""> Dashboard
+                                <img src="./pictures/dashboard-icon.svg" alt=""> <span>Dashboard</span>
                             </a>
                         </li>
                         <li>
-                            <a href="./profile.html">
-                                <img src="./pictures/profile-icon.svg" alt=""> Profile
+                            <a href="./profile.html" class="active">
+                                <img src="./pictures/profile-icon.svg" alt=""> <span>Profile</span>
                             </a>
                         </li>
-
+                        <li>
+                            <a href="./connection.html">
+                                <img src="./pictures/connection-icon.svg" alt=""> <span>Connection</span>
+                            </a>
+                        </li>
                         <li>
                             <a href="./subsciption.html">
-                                <img src="./pictures/subscription-icon.svg" alt=""> Subscription
+                                <img src="./pictures/subscription-icon.svg" alt=""> <span>Subscription</span>
                             </a>
                         </li>
                         <li>
                             <a href="./dues.html">
-                                <img src="./pictures/dues-icon.svg" alt=""> Dues
+                                <img src="./pictures/dues-icon.svg" alt=""> <span>Dues</span>
                             </a>
                         </li>
                         <li>
                             <a href="transactions.html">
-                                <img src="./pictures/transactions-icon.svg" alt=""> Transactions
+                                <img src="./pictures/transactions-icon.svg" alt=""> <span>Transactions</span>
                             </a>
                         </li>
                     </ul>
@@ -51,7 +56,7 @@
 
             <div class="sidebar_bottom">
                 <a href="../login.html">
-                    <img src="./pictures/logout-icon.svg" alt=""> Logout
+                    <img src="./pictures/logout-icon.svg" alt=""> <span>Logout</span>
                 </a>
             </div>
         </aside>
@@ -63,23 +68,66 @@
             <section id="topbar">
                 <div class="breadcrumb">
                     <h1 class="page_title">profile</h1>
-                    <p class="msg">hey john! here is all about you 😃</p>
+                    <p class="msg">hey john! here is all about you 😊</p>
                 </div>
                 <div class="user">
-                    <a href="javascript:void()">
-                        <img src="./pictures/notification-icon.svg" alt="">
-                    </a>
-                    <a href="./settings.html">
-                        <img src="./pictures/settings-icon.svg" alt="">
-                    </a>
                     <a href="./profile.html">
                         <img src="./pictures/john-wick.jpg" alt="" class="user_image">
                     </a>
                 </div>
             </section>
 
-            <!-- main -->
-            <main></main>
+            <!-- profile content -->
+            <main id="profile">
+                <div class="card personal_info">
+                    <div>
+                        <h3 class="heading">Personal Information</h3>
+                        <p>Update your photo and personal details here.</p>
+                    </div>
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <div class="input">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" value="John">
+                        </div>
+                        <div class="input">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" value="johnwick@gmail.com">
+                        </div>
+                        <div class="input_img">
+                            <img src="./pictures/john-wick.jpg" alt="" class="user_image" id="image">
+                            <label for="uploadImage" class="upload_img">Upload your image</label>
+                            <input type="file" name="image" id="uploadImage" accept="image/*">
+                        </div>
+                        <hr>
+                        <div class="buttons">
+                            <button class="button" type="reset">Cencel</button>
+                            <button class="button action" type="submit">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card password_info">
+                    <div>
+                        <h3 class="heading">Change Password</h3>
+                        <p>Update your password here.</p>
+                    </div>
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <div class="input">
+                            <label for="old_password">Old Password</label>
+                            <input type="text" name="old_password" id="old_password" placeholder="Put you old password"
+                                required>
+                        </div>
+                        <div class="input">
+                            <label for="password">New Password</label>
+                            <input type="password" name="password" id="password" placeholder="Put your new password"
+                                required>
+                        </div>
+                        <hr>
+                        <div class="buttons">
+                            <button class="button action" type="submit">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </main>
 
             <!-- footer -->
             <footer id="footer">

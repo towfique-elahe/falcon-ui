@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="./pictures/favicon.svg" type="image/x-icon">
     <!-- stylesheets -->
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/responsive.css">
 </head>
 
 <body>
@@ -21,28 +22,32 @@
                     <ul>
                         <li>
                             <a href="./dashboard.html">
-                                <img src="./pictures/dashboard-icon.svg" alt=""> Dashboard
+                                <img src="./pictures/dashboard-icon.svg" alt=""> <span>Dashboard</span>
                             </a>
                         </li>
                         <li>
                             <a href="./profile.html">
-                                <img src="./pictures/profile-icon.svg" alt=""> Profile
+                                <img src="./pictures/profile-icon.svg" alt=""> <span>Profile</span>
                             </a>
                         </li>
-
                         <li>
-                            <a href="./subsciption.html">
-                                <img src="./pictures/subscription-icon.svg" alt=""> Subscription
+                            <a href="./connection.html">
+                                <img src="./pictures/connection-icon.svg" alt=""> <span>Connection</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./subsciption.html" class="active">
+                                <img src="./pictures/subscription-icon.svg" alt=""> <span>Subscription</span>
                             </a>
                         </li>
                         <li>
                             <a href="./dues.html">
-                                <img src="./pictures/dues-icon.svg" alt=""> Dues
+                                <img src="./pictures/dues-icon.svg" alt=""> <span>Dues</span>
                             </a>
                         </li>
                         <li>
                             <a href="transactions.html">
-                                <img src="./pictures/transactions-icon.svg" alt=""> Transactions
+                                <img src="./pictures/transactions-icon.svg" alt=""> <span>Transactions</span>
                             </a>
                         </li>
                     </ul>
@@ -51,7 +56,7 @@
 
             <div class="sidebar_bottom">
                 <a href="../login.html">
-                    <img src="./pictures/logout-icon.svg" alt=""> Logout
+                    <img src="./pictures/logout-icon.svg" alt=""> <span>Logout</span>
                 </a>
             </div>
         </aside>
@@ -62,24 +67,55 @@
             <!-- topbar -->
             <section id="topbar">
                 <div class="breadcrumb">
-                    <h1 class="page_title">subscription</h1>
+                    <h1 class="page_title">subscription details</h1>
                     <p class="msg">hey john! choose your subscription plan wisely 😃</p>
                 </div>
                 <div class="user">
-                    <a href="javascript:void()">
-                        <img src="./pictures/notification-icon.svg" alt="">
-                    </a>
-                    <a href="./settings.html">
-                        <img src="./pictures/settings-icon.svg" alt="">
-                    </a>
                     <a href="./profile.html">
                         <img src="./pictures/john-wick.jpg" alt="" class="user_image">
                     </a>
                 </div>
             </section>
 
-            <!-- main -->
-            <main></main>
+            <!-- profile content -->
+            <main id="subscription">
+                <div class="card_container">
+                    <div class="card">
+                        <h3 class="plan_name">Basic</h3>
+                        <div>
+                            <p>Started <span>10 Nov, 2022</span></p>
+                            <p>Ends <span>10 Dec, 2022</span></p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="heading">Details</h3>
+                        <table>
+                            <tr>
+                                <td class="plan_speed">15 <span>mbps</span></td>
+                            </tr>
+                            <tr>
+                                <td>15 mbps speed / Off-Peak</td>
+                            </tr>
+                            <tr>
+                                <td>10 mbps speed / Peak</td>
+                            </tr>
+                            <tr>
+                                <td>24/7 Support</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td class="plan_price">৳ <span>800</span> /month</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </main>
 
             <!-- footer -->
             <footer id="footer">

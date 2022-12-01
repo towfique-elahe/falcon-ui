@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - FALCON</title>
+    <link rel="shortcut icon" href="./pictures/favicon.svg" type="image/x-icon">
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/responsive.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- sidebar starts here -->
+        <aside id="sidebar">
+            <div class="sidebar_top">
+                <a href="./dashboard.html"><img src="./pictures/logo-light.svg" alt="" class="logo"></a>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="./dashboard.html">
+                                <img src="./pictures/dashboard-icon.svg" alt=""> <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./profile.html">
+                                <img src="./pictures/profile-icon.svg" alt=""> <span>Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./connection.html" class="active">
+                                <img src="./pictures/connection-icon.svg" alt=""> <span>Connection</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./subsciption.html">
+                                <img src="./pictures/subscription-icon.svg" alt=""> <span>Subscription</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./dues.html">
+                                <img src="./pictures/dues-icon.svg" alt=""> <span>Dues</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="transactions.html">
+                                <img src="./pictures/transactions-icon.svg" alt=""> <span>Transactions</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="sidebar_bottom">
+                <a href="../login.html">
+                    <img src="./pictures/logout-icon.svg" alt=""> <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+        <!-- sidebar ends here -->
+
+        <!-- main section starts here -->
+        <section id="main">
+            <!-- topbar -->
+            <section id="topbar">
+                <div class="breadcrumb">
+                    <h1 class="page_title">connection details</h1>
+                    <p class="msg">hey john! here is your connection details 😃</p>
+                </div>
+                <div class="user">
+                    <a href="./profile.html">
+                        <img src="./pictures/john-wick.jpg" alt="" class="user_image">
+                    </a>
+                </div>
+            </section>
+
+            <!-- profile content -->
+            <main id="connection">
+                <div class="connection_details">
+                    <div class="status_card connection">
+                        <img src="./pictures/connection-icon.svg" alt="" class="icon">
+                        <h3 class="status">Connected</h3>
+                    </div>
+                    <div class="status_card subscription">
+                        <img src="./pictures/subscription-icon.svg" alt="" class="icon">
+                        <h3 class="status">Basic</h3>
+                    </div>
+                    <div class="details">
+                        <table>
+                            <tr>
+                                <th>User Id</th>
+                                <td>fl201</td>
+                            </tr>
+                            <tr>
+                                <th>Username</th>
+                                <td>john420</td>
+                            </tr>
+                            <tr>
+                                <th>Connection Id</th>
+                                <td>flc234</td>
+                            </tr>
+                            <tr>
+                                <th>Subscription Id</th>
+                                <td>fls356</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <img src="./pictures/connection-illustration.svg" alt="" class="connection_img">
+            </main>
+
+            <!-- footer -->
+            <footer id="footer">
+                © 2022 - <span>falcon</span> all right reserved
+            </footer>
+        </section>
+        <!-- main section ends here -->
+    </div>
+</body>
+
+</html>
