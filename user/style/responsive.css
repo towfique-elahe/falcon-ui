@@ -89,3 +89,37 @@
     }
 }
 /* connection ends here */
+
+
+/* subscription starts here */
+@media only screen and (max-width: 750px){
+    #subscription{
+        flex-direction: column;
+    }
+}
+/* subscription ends here */
+
+
+/* dues starts here */
+@media only screen and (max-width: 750px){
+    #dues{
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
+/* dues ends here */
+
+
+/* transaction starts here */
+@media only screen and (max-width: 740px) {
+    #transactions table th:nth-child(3), #transactions table td:nth-child(3){
+        display: none;
+    }
+}
+@media only screen and (max-width: 512px) {
+    #transactions table th:nth-child(2), #transactions table td:nth-child(2){
+        display: none;
+    }
+}
+/* transaction ends here */

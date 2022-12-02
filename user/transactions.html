@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trasactions - FALCON</title>
+    <title>Transactions - FALCON</title>
     <link rel="shortcut icon" href="./pictures/favicon.svg" type="image/x-icon">
     <!-- stylesheets -->
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/responsive.css">
 </head>
 
 <body>
@@ -21,27 +22,32 @@
                     <ul>
                         <li>
                             <a href="./dashboard.html">
-                                <img src="./pictures/dashboard-icon.svg" alt=""> Dashboard
+                                <img src="./pictures/dashboard-icon.svg" alt=""> <span>Dashboard</span>
                             </a>
                         </li>
                         <li>
                             <a href="./profile.html">
-                                <img src="./pictures/profile-icon.svg" alt=""> Profile
+                                <img src="./pictures/profile-icon.svg" alt=""> <span>Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./connection.html">
+                                <img src="./pictures/connection-icon.svg" alt=""> <span>Connection</span>
                             </a>
                         </li>
                         <li>
                             <a href="./subsciption.html">
-                                <img src="./pictures/subscription-icon.svg" alt=""> Subscription
+                                <img src="./pictures/subscription-icon.svg" alt=""> <span>Subscription</span>
                             </a>
                         </li>
                         <li>
                             <a href="./dues.html">
-                                <img src="./pictures/dues-icon.svg" alt=""> Dues
+                                <img src="./pictures/dues-icon.svg" alt=""> <span>Dues</span>
                             </a>
                         </li>
                         <li>
-                            <a href="transactions.html">
-                                <img src="./pictures/transactions-icon.svg" alt=""> Transactions
+                            <a href="transactions.html" class="active">
+                                <img src="./pictures/transactions-icon.svg" alt=""> <span>Transactions</span>
                             </a>
                         </li>
                     </ul>
@@ -50,7 +56,7 @@
 
             <div class="sidebar_bottom">
                 <a href="../login.html">
-                    <img src="./pictures/logout-icon.svg" alt=""> Logout
+                    <img src="./pictures/logout-icon.svg" alt=""> <span>Logout</span>
                 </a>
             </div>
         </aside>
@@ -65,20 +71,83 @@
                     <p class="msg">hey john! here is all you gave to falcon 😃</p>
                 </div>
                 <div class="user">
-                    <a href="javascript:void()">
-                        <img src="./pictures/notification-icon.svg" alt="">
-                    </a>
-                    <a href="./settings.html">
-                        <img src="./pictures/settings-icon.svg" alt="">
-                    </a>
                     <a href="./profile.html">
                         <img src="./pictures/john-wick.jpg" alt="" class="user_image">
                     </a>
                 </div>
             </section>
 
-            <!-- main -->
-            <main></main>
+            <!-- profile content -->
+            <main id="transactions">
+                <div class="transaction_table">
+                    <h3 class="table_title">
+                        <img src="./pictures/transactions-icon.svg" alt="">
+                        recent transactions
+                    </h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Plan</th>
+                                <th>Method</th>
+                                <th>Amount</th>
+                                <th>Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>001</td>
+                                <td>premium package subscription</td>
+                                <td>bkash</td>
+                                <td>৳1500</td>
+                                <td>03 oct, 2022</td>
+                                <td>
+                                    <a href="#" class="action">
+                                        <img src="./pictures/detials_icon.svg" alt="">
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>001</td>
+                                <td>premium package subscription</td>
+                                <td>bkash</td>
+                                <td>৳1500</td>
+                                <td>03 oct, 2022</td>
+                                <td>
+                                    <a href="#" class="action">
+                                        <img src="./pictures/detials_icon.svg" alt="">
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>001</td>
+                                <td>premium package subscription</td>
+                                <td>bkash</td>
+                                <td>৳1500</td>
+                                <td>03 oct, 2022</td>
+                                <td>
+                                    <a href="#" class="action">
+                                        <img src="./pictures/detials_icon.svg" alt="">
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>001</td>
+                                <td>premium package subscription</td>
+                                <td>bkash</td>
+                                <td>৳1500</td>
+                                <td>03 oct, 2022</td>
+                                <td>
+                                    <a href="#" class="action">
+                                        <img src="./pictures/detials_icon.svg" alt="">
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
 
             <!-- footer -->
             <footer id="footer">

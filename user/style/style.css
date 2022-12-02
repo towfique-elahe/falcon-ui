@@ -209,7 +209,7 @@ main{
     padding: 1rem;
     overflow: scroll;
 }
-#dashboard table{
+table{
     width: 100%;
 }
 table, th, td{
@@ -228,11 +228,23 @@ tbody tr:hover{
     background-color: white;
     box-shadow: var(--shadow);
 }
-#dashboard .transaction_table th{
+table th{
     text-transform: capitalize;
     font-size: 1rem;
     font-weight: 600;
     padding: .5rem;
+}
+.table_title{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: .5rem 1rem;
+}
+.table_title img{
+    width: 2rem;
 }
 #dashboard thead th:nth-child(2){
     text-align: left;
@@ -242,9 +254,9 @@ tbody tr:hover{
     align-items: center;
     gap: .5rem;
 }
-#dashboard .transaction_table td{
+td{
     text-transform: capitalize;
-    padding: .5rem;
+    padding: 1rem .5rem;
 }
 #dashboard .transaction_table td:nth-child(1){
     text-align: center;
@@ -260,7 +272,6 @@ tbody tr:hover{
 }
 #dashboard .transaction_table td:nth-child(5){
     text-align: center;
-
 }
 /* dashboard ends here */
 
@@ -427,22 +438,12 @@ tbody tr:hover{
     padding: 1rem;
     border-radius: .5rem;
 }
-#connection table{
-    width: 100%;
-}
-#connection tr{
-    background-color: transparent;
-}
 #connection tr:hover{
     background-color: white;
 }
 #connection th, #connection td{
     text-align: left;
-    padding: 1rem;
     letter-spacing: 1px;
-}
-#connection th{
-    font-weight: 500;
 }
 /* connection ends here */
 
@@ -450,11 +451,20 @@ tbody tr:hover{
 /* subscription starts here */
 #subscription{
     padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    color: var(--dark);
+}
+#subscription .illustration{
+    width: 100%;
+    max-width: 30rem;
 }
 #subscription .card_container{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 }
 #subscription .card{
     width: 100%;
@@ -463,11 +473,17 @@ tbody tr:hover{
     padding: 1rem;
     border-radius: .5rem;
 }
+#subscription .plan{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 #subscription .card .plan_name{
     font-size: 3rem;
     font-weight: 600;
     color: var(--clr1);
-    margin-bottom: .5rem;
 }
 #subscription .card p{
     font-size: .8rem;
@@ -476,4 +492,98 @@ tbody tr:hover{
     color: var(--clr1);
     font-weight: 500;
 }
+#subscription .heading{
+    padding: 1rem .5rem;
+}
+#subscription .plan_price{
+    font-weight: 600;
+}
+#subscription .plan_price span{
+    font-size: 2rem;
+    font-weight: 600;
+}
 /* subscription ends here */
+
+
+
+/* dues starts here */
+#dues{
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+}
+#dues .illustration{
+    width: 100%;
+    max-width: 30rem;
+}
+#dues .due_container{
+    width: 100%;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+#dues .due_card{
+    width: 100%;
+    background-color: #ffffffa9;
+    padding: 1rem;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+#dues .due_card div{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+#dues .due_card img{
+    width: 2rem;
+}
+#dues .heading{
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--clr1);
+}
+#dues .due_amount{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+#dues .due_amount span{
+    font-size: 2rem;
+}
+#dues .due_table{
+    padding: 1rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #ffffffa9;
+}
+table .action{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+table .action img{
+    width: 1.5rem;
+}
+/* dues ends here */
+
+
+/* transactions starts here */
+#transactions .transaction_table{
+    background-color: #ffffffa9;
+    border-radius: .5rem;
+    padding: 1rem;
+}
+#transactions .transaction_table td{
+    text-align: center;
+}
+/* transactions ends here */
