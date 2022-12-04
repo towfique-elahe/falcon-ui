@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 /* variables */
 :root{
     --clr1: #1d686f;
@@ -46,6 +57,7 @@ a{
     display: flex;
     gap: 2rem;
 }
+
 
 /* sidebar starts here */
 #sidebar{
@@ -583,3 +595,244 @@ table .action img{
     text-align: center;
 }
 /* transactions ends here */
+
+
+/* plans starts here */
+#plans .plan_container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+#plans .plan{
+    width: 100%;
+    max-width: 20rem;
+    min-width: 18rem;
+    border: 5px solid rgba(8, 65, 109, 0.1);
+    border-radius: 1rem;
+    background-color: #94c8f05d;
+    cursor: default;
+}
+#plans .plan:hover{
+    box-shadow: var(--shadow);
+}
+#plans .plan_title{
+    width: 100%;
+    max-width: 10rem;
+    padding: 1rem;
+    border-radius: 1rem 1rem 2.5rem 2.5rem;
+    margin: 0 auto;
+    border: 5px solid rgba(8, 65, 109, 0.1);
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    letter-spacing: .2rem;
+    margin-top: -5px;
+}
+#plans .plan:hover .plan_title{
+    max-width: 100%;
+}
+#plans .standard{
+    background-color: #a1d0d45d;
+}
+#plans .basic .plan_title{
+    background-color: #F8DCD1;
+}
+#plans .standard .plan_title{
+    background-color: #ecdefd;
+}
+#plans .premium .plan_title{
+    background-color: #ffe9ca;
+}
+#plans .button{
+    background-color: var(--clr1);
+    color: var(--light);
+    font-weight: 500;
+    text-transform: capitalize;
+    width: 100%;
+    border-radius: 2rem 2rem 1rem 1rem;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: .2rem;
+}
+#plans .button:hover{
+    margin-top: -1rem;
+    padding: 1.5rem 1rem;
+}
+#plans table, #plans td{
+    border-collapse: collapse;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 500;
+}
+#plans table{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+#plans tr{
+    background-color: transparent;
+}
+#plans td{
+    border-bottom: solid 2px #2228312c;
+}
+#plans td:hover{
+    background-color: #2228310b;
+}
+#plans tr:nth-child(7) td{
+    border: none;
+}
+#plans .plan_speed span{
+    color: var(--clr1);
+    text-transform: capitalize;
+    font-size: 1rem;
+}
+#plans .plan_speed{
+    color: var(--clr1);
+    font-size: 3rem;
+    font-weight: 600;
+}
+#plans .plan_price{
+    color: var(--clr1);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+#plans .plan_price span{
+    font-size: 2rem;
+    color: var(--clr1);
+}
+/* plans ends here */
+
+
+/* checkout starts here */
+#checkout{
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    justify-content: space-between;
+}
+#checkout .illustration{
+    width: 100%;
+    max-width: 25rem;
+}
+#checkout .card_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#checkout .card{
+    background-color: #ffffffa9;
+    padding: 1rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#checkout .plan{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+#checkout hr{
+    border-color: #22283114;
+}
+#checkout .heading{
+    color: var(--clr1);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+#checkout .plan_name, #checkout .plan_price{
+    font-weight: 600;
+}
+
+/* payment details */
+#checkout form{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+#checkout .input{
+    display: flex;
+    flex-direction: column;
+}
+#checkout label{
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-bottom: .2rem;
+}
+#checkout input{
+    background-color: #d4e8e984;
+    font-size: 1rem;
+    border-radius: .3rem;
+    padding: .5rem 1rem;
+    border: none;
+    outline: none;
+}
+#checkout input:focus{
+    background-color: white;
+    box-shadow: var(--shadow);
+}
+#checkout .mastercard{
+    display: flex;
+}
+#checkout .mastercard input:nth-child(1){
+    width: 100%;
+    margin-right: 1rem;
+}
+#checkout .mastercard input:nth-child(2){
+    width: 6rem;
+    margin-right: 1rem;
+}
+#checkout .mastercard input:nth-child(3){
+    width: 6rem;
+}
+#checkout tr{
+    background-color: transparent;
+    box-shadow: none;
+}
+#checkout td{
+    padding: .5rem 1rem;
+    font-weight: 500;
+}
+#checkout td:nth-child(2){
+    text-align: right;
+}
+#checkout tr:nth-child(3) td{
+    font-weight: 700;
+}
+#checkout .buttons{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+#checkout .button{
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: solid var(--dark) 1px;
+    border-radius: .3rem;
+    cursor: pointer;
+    background-color: var(--dark);
+    color: var(--light);
+    margin-top: 1rem;
+}
+#checkout .button:hover{
+    background-color: var(--clr1);
+    box-shadow: var(--shadow);
+    border-color: var(--clr1);
+}
+#checkout .cancel{
+    background-color: transparent;
+    color: var(--dark);
+}
+#checkout .cancel:hover{
+    background-color: crimson;
+    color: var(--light);
+    border-color: crimson;
+}
+/* checkout ends here */

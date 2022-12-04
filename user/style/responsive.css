@@ -123,3 +123,25 @@
     }
 }
 /* transaction ends here */
+
+
+/* checkout starts here */
+@media only screen and (max-width: 1000px) {
+    #checkout{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    #checkout .illustration{
+        max-width: 20rem;
+    }
+}
+@media only screen and (max-width: 450px){
+    #checkout .mastercard{
+        flex-direction: column;
+        gap: .5rem;
+    }
+    #checkout .mastercard input{
+        width: 100% !important;
+    }
+}
+/* checkout ends here */

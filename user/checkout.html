@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - FALCON</title>
+    <link rel="shortcut icon" href="./pictures/favicon.svg" type="image/x-icon">
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/responsive.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- sidebar starts here -->
+        <aside id="sidebar">
+            <div class="sidebar_top">
+                <a href="./dashboard.html"><img src="./pictures/logo-light.svg" alt="" class="logo"></a>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="./dashboard.html">
+                                <img src="./pictures/dashboard-icon.svg" alt=""> <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./profile.html">
+                                <img src="./pictures/profile-icon.svg" alt=""> <span>Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./connection.html">
+                                <img src="./pictures/connection-icon.svg" alt=""> <span>Connection</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./subsciption.html" class="active">
+                                <img src="./pictures/subscription-icon.svg" alt=""> <span>Subscription</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./dues.html">
+                                <img src="./pictures/dues-icon.svg" alt=""> <span>Dues</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="transactions.html">
+                                <img src="./pictures/transactions-icon.svg" alt=""> <span>Transactions</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="sidebar_bottom">
+                <a href="../login.html">
+                    <img src="./pictures/logout-icon.svg" alt=""> <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+        <!-- sidebar ends here -->
+
+        <!-- main section starts here -->
+        <section id="main">
+            <!-- topbar -->
+            <section id="topbar">
+                <div class="breadcrumb">
+                    <h1 class="page_title">checkout</h1>
+                    <p class="msg">hey john! its time to give us something 🙂</p>
+                </div>
+                <div class="user">
+                    <a href="./profile.html">
+                        <img src="./pictures/john-wick.jpg" alt="" class="user_image">
+                    </a>
+                </div>
+            </section>
+
+            <!-- profile content -->
+            <main id="checkout">
+                <div class="card_container">
+                    <div class="card summary">
+                        <div>
+                            <h3 class="heading">Order Summary</h3>
+                            <p class="sub_heading">Your selected plan</p>
+                        </div>
+                        <hr>
+                        <div class="plan">
+                            <h3 class="plan_name">Basic</h3>
+                            <p class="plan_price">৳ 800</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <h3 class="heading">Payment Details</h3>
+                            <p class="sub_heading">Complete your subscription by clearing payment details</p>
+                        </div>
+                        <hr>
+                        <form action="" method="post" enctype="multipart/form-data">
+                            <div class="input">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name" placeholder="Your Name" value="John Wick"
+                                    required>
+                            </div>
+                            <div class="input">
+                                <label for="email">Email Address</label>
+                                <input type="email" name="email" id="email" placeholder="Your Email"
+                                    value="johnwick@email.com" required>
+                            </div>
+                            <div class="input">
+                                <label for="cardInfo">Card Details</label>
+                                <div class="mastercard">
+                                    <input type="number" name="card_number" id="cardInfo" placeholder="Card Number"
+                                        min="1000000000000000" max="9999999999999999" required>
+                                    <input type="month" name="card_expires" placeholder="MM/YY" maxlength="5" required>
+                                    <input type="number" name="card_cvc" placeholder="CVC" min="100" max="999" required>
+                                </div>
+                            </div>
+                            <div class="input">
+                                <label for="card_holder">Card Holder</label>
+                                <input type="text" name="card_holder" id="card_holder" placeholder="Card Holder Name"
+                                    maxlength="50" required>
+                            </div>
+                            <div class="input">
+                                <label for="bill_add">Billing Address</label>
+                                <input type="text" name="bill_add" id="bill_add" placeholder="Billing Address"
+                                    maxlength="100" required>
+                            </div>
+                            <br>
+                            <hr>
+                            <table class="pricing">
+                                <tr>
+                                    <td>Subtotal</td>
+                                    <td>৳ <span>800</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Vat (10%)</td>
+                                    <td>৳ <span>80</span></td>
+                                </tr>
+                                <tr class="price">
+                                    <td>Total</td>
+                                    <td>৳ <span>880</span></td>
+                                </tr>
+                            </table>
+                            <div class="buttons">
+                                <button type="reset" class="button cancel">Cancel</button>
+                                <button type="submit" class="button action">Pay ৳ 880</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <img src="./pictures/checkout_illustration.svg" alt="" class="illustration">
+            </main>
+
+            <!-- footer -->
+            <footer id="footer">
+                © 2022 - <span>falcon</span> all right reserved
+            </footer>
+        </section>
+        <!-- main section ends here -->
+    </div>
+</body>
+
+</html>
