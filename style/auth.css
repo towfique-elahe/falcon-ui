@@ -5,13 +5,14 @@
 }
 #hero .form{
     width: 100%;
-    max-width: 25rem;
-    background-color: #ffffff52;
+    max-width: 30rem;
+    background-color: var(--light_green);
+    border: var(--border);
     display: flex;
     flex-direction: column;
     gap: 2rem;
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 2rem 3rem;
 }
 #hero .form .button{
     width: 10rem;
@@ -30,12 +31,6 @@
 #hero .button img{
     width: 1.5rem;
 }
-/* #hero .form_top{
-    text-align: center;
-}
-#hero .form_top .sec_heading{
-    text-align: center;
-} */
 #hero .form_inputs{
     display: flex;
     flex-direction: column;
@@ -48,15 +43,23 @@
 #hero .input input{
     border: none;
     outline: none;
-    padding: .8rem 1rem;
+    padding: .5rem 1rem;
     font-size: 1rem;
     letter-spacing: 1px;
     border-radius: .5rem;
-    background-color: #08416d28;
+    background-color: var(--light_gold);
+    border: var(--border);
+    border-width: 2px;
 }
 #hero .input input:focus{
     background-color: var(--light);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-light);
+}
+#hero p a{
+    background-color: var(--primary);
+    color: var(--light);
+    padding: .1rem .5rem;
+    border-radius: 5rem;
 }
 @media only screen and (max-width: 625px){
     #hero .log .sec_image{

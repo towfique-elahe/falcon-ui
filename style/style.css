@@ -13,12 +13,18 @@ input[type=number] {
 
 /* variables */
 :root{
-    --clr1: #1d686f;
-    --clr2: #94C8F0;
-    --clr3: #A1D0D4;
-    --light: #FCFDFD;
-    --dark: #222831;
-    --shadow: #2228311a 0 0 10px 5px;
+    --light: #FFFDF9;
+    --light_green: #FAFFF2;
+    --light_gold: #FFFAEC;
+    --gold: #E5D9B6;
+    --green1: #A4BE7B;
+    --green2: #5F8D4E;
+    --green3: #285430;
+    --primary: #0F3015;
+    --dark: #011204;
+    --border: solid .3rem #0f30150f;
+    --shadow-light: #0f30151c 0 0 10px;
+    --shadow-dark: #0f30151c 0 0 10px 5px;
 }
 
 /* universal stuff */
@@ -35,12 +41,13 @@ input[type=number] {
 }
 
 *::selection{
-    background-color: var(--clr1);
-    color: var(--light);
+    background-color: var(--primary);
+    color: var(--gold);
 }
 
 html{
     font-size: 14px;
+    background-color: var(--light);
 }
 
 a{
@@ -63,7 +70,7 @@ section{
     font-weight: 700;
     text-transform: capitalize;
     letter-spacing: .1rem;
-    color: var(--clr1);
+    color: var(--primary);
     text-align: center;
 }
 
@@ -86,21 +93,21 @@ section{
 }
 .button{
     background-color: transparent;
-    color: var(--clr1);
-    border: solid 1px var(--clr1);
+    color: var(--primary);
+    border: solid 1px var(--primary);
     padding: .5rem 1rem;
     border-radius: .3rem;
     font-weight: 500;
     text-transform: capitalize;
 }
 .button:hover{
-    background-color: var(--clr1);
-    color: var(--light);
-    box-shadow: var(--shadow);
+    background-color: var(--primary);
+    color: var(--gold);
+    box-shadow: var(--shadow-dark);
 }
 .action{
-    background-color: var(--clr1);
-    color: var(--light);
+    background-color: var(--primary);
+    color: var(--gold);
 }
 
 /* header starts here */
@@ -112,7 +119,7 @@ section{
 }
 #header img{
     width: 100%;
-    max-width: 10rem;
+    max-width: 15rem;
 }
 #header .nav{
     display: flex;
@@ -129,15 +136,14 @@ section{
     padding: .1rem .2rem;
 }
 #header li a:hover{
-    color: var(--clr1);
+    color: var(--primary);
     font-weight: 500;
-    border-color: var(--clr1);
+    border-color: var(--primary);
 }
 /* header ends here */
 
 /* hero section starts here */
 #hero{
-    background-color: #bbe2e5;
     overflow: hidden;
     height: 100vh;
     min-height: 680px;
@@ -169,9 +175,6 @@ section{
 
 
 /* service section starts here */
-#service{
-    background-color: #F1FEFF;
-}
 #service .service_container{
     margin-top: 2rem;
     display: flex;
@@ -181,7 +184,7 @@ section{
     flex-wrap: wrap;
 }
 #service .icon_container{
-    background-color: var(--light);
+    background-color: var(--primary);
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
@@ -190,15 +193,16 @@ section{
     justify-content: center;
 }
 #service .icon_container img{
-    width: 3rem;
+    width: 2rem;
     transition: ease .7s;
 }
 #service .service{
     width: 15rem;
     height: 18rem;
-    background-image: linear-gradient(45deg, var(--clr2), var(--clr3));
+    background-color: var(--light);
+    border: var(--border);
     padding: 1.5rem;
-    border-radius: .5rem;
+    border-radius: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -207,7 +211,7 @@ section{
     cursor: default;
 }
 #service .service:hover{
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-dark);
 }
 #service .service:hover img{
     transform: rotate(360deg);
@@ -224,9 +228,6 @@ section{
 
 
 /* about section starts here */
-#about{
-    background-color: #DDF0FF;
-}
 #about .container{
     display: flex;
     align-items: center;
@@ -251,9 +252,6 @@ section{
 
 
 /* pricing section starts  here */
-#pricing{
-    background-color: #F1FEFF;
-}
 #pricing .plan_container{
     display: flex;
     align-items: flex-start;
@@ -266,13 +264,13 @@ section{
     width: 100%;
     max-width: 20rem;
     min-width: 18rem;
-    border: 5px solid rgba(8, 65, 109, 0.1);
+    border: var(--border);
     border-radius: 1rem;
-    background-color: #94c8f05d;
+    background-color: var(--light_green);
     cursor: default;
 }
 #pricing .plan:hover{
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-dark);
 }
 #pricing .plan_title{
     width: 100%;
@@ -280,7 +278,7 @@ section{
     padding: 1rem;
     border-radius: 1rem 1rem 2.5rem 2.5rem;
     margin: 0 auto;
-    border: 5px solid rgba(8, 65, 109, 0.1);
+    border: var(--border);
     text-align: center;
     text-transform: capitalize;
     font-size: 1.2rem;
@@ -292,13 +290,13 @@ section{
 }
 #pricing .standard{
     margin-top: 3rem;
-    background-color: #a1d0d45d;
+    background-color: var(--light_gold);
 }
 #pricing .basic .plan_title{
     background-color: #F8DCD1;
 }
 #pricing .standard .plan_title{
-    background-color: #ecdefd;
+    background-color: #E9FDFF;
 }
 #pricing .premium .plan_title{
     background-color: #ffe9ca;
@@ -329,7 +327,9 @@ section{
     margin-bottom: 1rem;
 }
 #pricing td{
-    border-bottom: solid 2px #2228312c;
+    border-bottom: var(--border);
+    border-bottom-width: 2px;
+    border-radius: 1rem;
 }
 #pricing td:hover{
     background-color: #2228310b;
@@ -338,31 +338,28 @@ section{
     border: none;
 }
 #pricing .plan_speed span{
-    color: var(--clr1);
+    color: var(--primary);
     text-transform: capitalize;
     font-size: 1rem;
 }
 #pricing .plan_speed{
-    color: var(--clr1);
+    color: var(--primary);
     font-size: 3rem;
     font-weight: 600;
 }
 #pricing .plan_price{
-    color: var(--clr1);
+    color: var(--primary);
     font-weight: 600;
     text-transform: uppercase;
 }
 #pricing .plan_price span{
     font-size: 2rem;
-    color: var(--clr1);
+    color: var(--primary);
 }
 /* pricing section ends  here */
 
 
 /* contact section starts here */
-#contact{
-    background-color: #DDF0FF;
-}
 #contact .container{
     display: flex;
     justify-content: center;
@@ -371,12 +368,13 @@ section{
 }
 #contact .contact{
     min-width: 300px;
-    background-image: linear-gradient(45deg, var(--clr2), var(--clr3));
+    background-color: var(--light_green);
+    border: var(--border);
     padding: 1rem;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: 1rem;
 }
 #contact .contact_info{
     display: flex;
@@ -407,16 +405,18 @@ section{
 }
 #contact input, #contact textarea{
     width: 100%;
-    padding: .2rem .5rem;
+    padding: .5rem 1rem;
     outline: none;
     border: none;
     border-radius: .2rem;
     font-size: 1rem;
-    background-color: #ffffff61;
+    background-color: var(--light_gold);
+    border: var(--border);
+    border-width: 1px;
 }
 #contact input:focus, #contact textarea:focus{
     background-color: var(--light);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-light);
 }
 #contact textarea{
     height: 5rem;
@@ -424,7 +424,7 @@ section{
 }
 #contact .button{
     width: 15rem;
-    background-color: var(--clr1);
+    background-color: var(--primary);
     color: var(--light);
     font-size: 1.2rem;
     padding: .5rem;
@@ -452,7 +452,7 @@ section{
     gap: 5rem;
 }
 #footer .footer_top p{
-    color: var(--clr3);
+    color: var(--gold);
     letter-spacing: .1rem;
 }
 #footer .footer_content{
@@ -464,7 +464,7 @@ section{
     padding: 0 1rem;
 }
 #footer .link_heading{
-    color: var(--clr3);
+    color: var(--gold);
     font-size: 1.2rem;
     margin-bottom: .5rem;
 }
@@ -475,7 +475,8 @@ section{
     margin-bottom: .3rem;
 }
 #footer .footer_content a:hover{
-    border-bottom: solid 1px var(--light);
+    color: var(--gold);
+    border-bottom: solid 1px var(--gold);
 }
 #footer .social nav{
     display: flex;
@@ -488,17 +489,17 @@ section{
     margin-top: 5rem;
 }
 #footer .footer_bottom hr{
-    border-color: #a1d0d484;
+    border-color: #e5d9b66c;
 }
 #footer .footer_bottom p{
-    color: #ffffff8c;
+    color: var(--light_gold);
     text-align: center;
     padding: 1rem;
     text-transform: capitalize;
     font-size: .8rem;
 }
 #footer .footer_bottom p span{
-    color: var(--clr3);
+    color: var(--gold);
     text-transform: uppercase;
 }
 /* footer ends here */
