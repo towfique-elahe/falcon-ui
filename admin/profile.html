@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard - FALCON</title>
+    <title>Admin Profile - FALCON</title>
     <link rel="shortcut icon" href="./pictures/favicon.svg" type="image/x-icon">
     <!-- stylesheets -->
     <link rel="stylesheet" href="./style/panel.css">
@@ -21,12 +21,12 @@
                 <nav>
                     <ul>
                         <li>
-                            <a href="./dashboard.html" class="active">
+                            <a href="./dashboard.html">
                                 <img src="./pictures/dashboard-icon.svg" alt=""> <span>Dashboard</span>
                             </a>
                         </li>
                         <li>
-                            <a href="./profile.html">
+                            <a href="./profile.html" class="active">
                                 <img src="./pictures/profile-icon.svg" alt=""> <span>Profile</span>
                             </a>
                         </li>
@@ -77,8 +77,8 @@
             <!-- topbar -->
             <section id="topbar">
                 <div class="breadcrumb">
-                    <h1 class="page_title">dashboard</h1>
-                    <p class="msg">welcome admin! floor is your 🔥</p>
+                    <h1 class="page_title">Admin Profile</h1>
+                    <p class="msg">hey admin! its your profile 🔥</p>
                 </div>
                 <div class="user">
                     <a href="./profile.html">
@@ -87,9 +87,59 @@
                 </div>
             </section>
 
-            <!-- main -->
-            <main id="dashboard">
-
+            <!-- profile content -->
+            <main id="profile">
+                <div class="card personal_info">
+                    <div>
+                        <h3 class="heading">Personal Information</h3>
+                        <p>Update your photo and personal details here.</p>
+                    </div>
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <div class="input">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" value="John">
+                        </div>
+                        <div class="input">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" value="johnwick@gmail.com">
+                        </div>
+                        <div class="input">
+                            <label for="">Image</label>
+                            <div class="input_img">
+                                <img src="./pictures/john-wick.jpg" alt="" class="user_image" id="image">
+                                <label for="uploadImage" class="upload_img">Upload your image</label>
+                                <input type="file" name="image" id="uploadImage" accept="image/*">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="buttons">
+                            <button class="button cancel" type="reset">Cancel</button>
+                            <button class="button action" type="submit">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card password_info">
+                    <div>
+                        <h3 class="heading">Change Password</h3>
+                        <p>Update your password here.</p>
+                    </div>
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <div class="input">
+                            <label for="old_password">Old Password</label>
+                            <input type="text" name="old_password" id="old_password" placeholder="Put you old password"
+                                required>
+                        </div>
+                        <div class="input">
+                            <label for="password">New Password</label>
+                            <input type="password" name="password" id="password" placeholder="Put your new password"
+                                required>
+                        </div>
+                        <hr>
+                        <div class="buttons">
+                            <button class="button action" type="submit">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
             </main>
 
             <!-- footer -->
