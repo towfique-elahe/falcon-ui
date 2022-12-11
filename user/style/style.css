@@ -437,7 +437,7 @@ td {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 1rem;
 }
 #connection .status_card {
   width: 100%;
@@ -462,7 +462,7 @@ td {
 #connection .status {
   color: var(--dark);
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 2rem;
 }
 #connection .details {
   width: 100%;
@@ -669,6 +669,93 @@ table .action img {
 }
 /* transactions ends here */
 
+/* conplain starts here */
+#complain {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
+#complain .illustration {
+  width: 100%;
+  max-width: 30rem;
+}
+#complain .complain_card {
+  width: 100%;
+  max-width: 25rem;
+  background-color: var(--light);
+  border: var(--border);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+#complain form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#complain .input {
+  display: flex;
+  flex-direction: column;
+}
+#complain label {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+#complain input,
+#complain textarea {
+  border: none;
+  outline: none;
+  background-color: var(--light_gold);
+  border: var(--border);
+  border-width: 2px;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  resize: vertical;
+}
+#complain input:focus,
+#complain textarea:focus {
+  box-shadow: var(--shadow-light);
+  background-color: var(--light);
+}
+#complain hr {
+  border-color: #22283110;
+  margin: 0.5rem 0;
+}
+#complain .buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+#complain .button {
+  width: fit-content;
+  width: -moz-fit-content;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: transparent;
+  border: var(--primary) solid 1px;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+#complain .button:hover {
+  background-color: var(--green2);
+  border-color: var(--green2);
+  box-shadow: var(--shadow-light);
+}
+#complain .action {
+  background-color: var(--primary);
+  color: var(--light);
+}
+#complain .cancel:hover {
+  background-color: crimson;
+  border-color: crimson;
+  color: var(--light);
+}
+/* conplain ends here */
+
 /* plans starts here */
 #plans .plan_container {
   display: flex;
@@ -721,7 +808,7 @@ table .action img {
 #plans .button {
   background-color: var(--primary);
   color: var(--gold);
-  font-weight: 500;
+  font-weight: 700;
   text-transform: capitalize;
   width: 100%;
   border-radius: 2rem 2rem 1rem 1rem;
@@ -839,7 +926,7 @@ table .action img {
 #checkout label {
   letter-spacing: 1px;
   font-weight: 500;
-  margin-bottom: 0.2rem;
+  margin: 0.5rem 0 0.3rem 0;
 }
 #checkout input {
   background-color: var(--light_gold);
@@ -853,6 +940,12 @@ table .action img {
 #checkout input:focus {
   background-color: var(--light);
   box-shadow: var(--shadow-light);
+}
+#checkout input:valid {
+  border-color: var(--green1);
+}
+#checkout input:invalid {
+  border-color: crimson;
 }
 #checkout .mastercard {
   display: flex;
@@ -912,4 +1005,110 @@ table .action img {
   color: var(--light);
   border-color: crimson;
 }
+#cardPayment {
+  display: block;
+}
+#bkashPayment,
+#cashPayment {
+  display: none;
+}
+#checkout .method_container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+#checkout .methods {
+  display: none;
+}
 /* checkout ends here */
+
+/* modal */
+.modal_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #01120450;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.modal {
+  width: 100%;
+  max-width: 40rem;
+  background-color: var(--light_green);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+.modal_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.modal_heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.modal_close {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal_close:hover {
+  background-color: crimson;
+}
+.modal_close img {
+  width: 2rem;
+  object-fit: cover;
+}
+.modal hr {
+  border-color: #01120414;
+}
+.due_modal {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+.due_pay {
+  background-color: var(--primary);
+  color: var(--light);
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+}
+.due_pay:hover {
+  background-color: var(--green2);
+}
+
+.invoice {
+  max-width: 50rem;
+  height: 98vh;
+  position: relative;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+.print {
+  background-color: var(--primary);
+  color: var(--light);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}

@@ -50,6 +50,11 @@
                                 <img src="./pictures/transactions-icon.svg" alt=""> <span>Transactions</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="./complain.html">
+                                <img src="./pictures/complain.svg" alt=""> <span>Complain</span>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -77,7 +82,7 @@
                 </div>
             </section>
 
-            <!-- profile content -->
+            <!-- transactions content -->
             <main id="transactions">
                 <div class="transaction_table">
                     <h3 class="table_title">
@@ -87,65 +92,75 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>Id</th>
-                                <th>Plan</th>
-                                <th>Method</th>
+                                <th>Invoice Id</th>
                                 <th>Amount</th>
+                                <th>Payment Status</th>
                                 <th>Date</th>
-                                <th>Action</th>
+                                <th>Details</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>001</td>
-                                <td>premium package subscription</td>
-                                <td>bkash</td>
                                 <td>৳1500</td>
+                                <td>Paid</td>
                                 <td>03 oct, 2022</td>
                                 <td>
-                                    <a href="#" class="action">
-                                        <img src="./pictures/detials_icon.svg" alt="">
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>premium package subscription</td>
-                                <td>bkash</td>
-                                <td>৳1500</td>
-                                <td>03 oct, 2022</td>
-                                <td>
-                                    <a href="#" class="action">
-                                        <img src="./pictures/detials_icon.svg" alt="">
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>premium package subscription</td>
-                                <td>bkash</td>
-                                <td>৳1500</td>
-                                <td>03 oct, 2022</td>
-                                <td>
-                                    <a href="#" class="action">
-                                        <img src="./pictures/detials_icon.svg" alt="">
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>premium package subscription</td>
-                                <td>bkash</td>
-                                <td>৳1500</td>
-                                <td>03 oct, 2022</td>
-                                <td>
-                                    <a href="#" class="action">
+                                    <a href="javascript:void()" class="action" onclick="modalOpen()">
                                         <img src="./pictures/detials_icon.svg" alt="">
                                     </a>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
+                </div>
+
+                <div class="modal_container" id="modal">
+                    <div class="modal invoice">
+                        <div class="modal_top">
+                            <h3 class="modal_heading">Invoice Id: 001</h3>
+                            <a href="javascript:void()" onclick="modalClose()" class="modal_close">
+                                <img src="./pictures/close.svg" alt="">
+                            </a>
+                        </div>
+                        <hr>
+                        <div class="transaction_modal">
+                            <div class="brand">
+                                <img src="./pictures/logo-light.svg" alt="" class="logo">
+                            </div>
+                            <table>
+                                <tr>
+                                    <td>User Name:</td>
+                                    <td>John</td>
+                                </tr>
+                                <tr>
+                                    <td>Subscription Id:</td>
+                                    <td>flc23423</td>
+                                </tr>
+                                <tr>
+                                    <td>Subscription Plan:</td>
+                                    <td>Basic</td>
+                                </tr>
+                                <tr>
+                                    <td>Amount:</td>
+                                    <td>৳ 800</td>
+                                </tr>
+                                <tr>
+                                    <td>Payment Status:</td>
+                                    <td>Paid</td>
+                                </tr>
+                                <tr>
+                                    <td>Payment Method:</td>
+                                    <td>Bkash</td>
+                                </tr>
+                                <tr>
+                                    <td>Date:</td>
+                                    <td>10 Dec, 2022</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <a href="javascript:void()" onclick="window.print()" class="print">Print Invoice</a>
+                    </div>
                 </div>
             </main>
 
@@ -159,6 +174,7 @@
 
     <!-- tidio chatbot -->
     <script src="//code.tidio.co/twbspc6mnupjw5gibhskqpaqoiimscra.js" async></script>
+    <script src="../js/modal.js"></script>
 </body>
 
 </html>

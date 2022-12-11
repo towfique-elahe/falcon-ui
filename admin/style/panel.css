@@ -13,12 +13,18 @@ input[type="number"] {
 
 /* variables */
 :root {
-  --light: #ffffff;
-  --primary: #f2e7d5;
-  --dark0: #111315;
-  --dark1: #212325;
-  --dark2: #323337;
-  --border: solid 0.3rem #f2e7d50d;
+  --light: #fffdf9;
+  --light_green: #fafff2;
+  --light_gold: #fffaec;
+  --gold: #e5d9b6;
+  --green1: #a4be7b;
+  --green2: #5f8d4e;
+  --green3: #285430;
+  --primary: #0f3015;
+  --dark: #011204;
+  --border: solid 0.3rem #0f30150f;
+  --shadow-light: #0f30151c 0 0 10px;
+  --shadow-dark: #0f30151c 0 0 10px 5px;
 }
 
 /* universal stuff */
@@ -31,17 +37,17 @@ input[type="number"] {
   scroll-behavior: smooth;
   transition: ease 0.3s;
   font-family: Montserrat;
-  color: var(--light);
+  color: var(--dark);
 }
 
 *::selection {
-  background-color: var(--dark2);
-  color: var(--primary);
+  background-color: var(--primary);
+  color: var(--light);
 }
 
 html {
   font-size: 14px;
-  background-color: var(--dark0);
+  background-color: var(--light);
 }
 
 a {
@@ -79,18 +85,19 @@ section {
 }
 .button:hover {
   background-color: var(--primary);
-  color: var(--dark0);
+  box-shadow: var(--shadow-dark);
+  color: var(--light);
 }
 .action {
-  background-color: var(--primary);
-  color: var(--dark0);
+  background-color: var(--primary) !important;
+  color: var(--light);
 }
 
 /* sidebar starts here */
 #sidebar {
   width: 300px;
   height: 100%;
-  background-color: var(--dark0);
+  background-color: var(--light_gold);
   border: var(--border);
   border-radius: 0.5rem;
   display: flex;
@@ -129,11 +136,13 @@ section {
 #sidebar .sidebar_bottom a:active,
 #sidebar li a:focus,
 #sidebar .sidebar_bottom a:focus {
-  background-color: var(--dark2);
+  background-color: var(--light);
   gap: 1.5rem;
+  box-shadow: var(--shadow-light);
 }
 #sidebar .active {
-  background-color: var(--dark2);
+  background-color: var(--light);
+  box-shadow: var(--shadow-light);
 }
 /* sidebar ends here */
 
@@ -141,7 +150,7 @@ section {
 #main {
   width: 100%;
   height: 100%;
-  background-color: var(--light_green);
+  background-color: var(--light);
   border: var(--border);
   border-radius: 0.5rem;
   padding: 1rem;
@@ -193,7 +202,7 @@ main {
 /* footer */
 #footer {
   text-align: center;
-  color: var(--green3);
+  color: var(--dark);
   font-size: 0.8rem;
   text-transform: capitalize;
 }
@@ -219,7 +228,7 @@ main {
 #profile .card {
   width: 100%;
   max-width: 500px;
-  background-color: var(--dark1);
+  background-color: var(--light_gold);
   border: var(--border);
   padding: 1rem;
   border-radius: 0.5rem;
@@ -243,7 +252,7 @@ main {
 #profile input {
   border: none;
   outline: none;
-  background-color: var(--dark2);
+  background-color: var(--light_green);
   border: var(--border);
   border-width: 2px;
   padding: 0.5rem 1rem;
@@ -251,8 +260,8 @@ main {
   font-size: 1rem;
 }
 #profile input:focus {
-  background-color: var(--primary);
-  color: var(--dark0);
+  background-color: var(--light);
+  box-shadow: var(--shadow-light);
 }
 #profile .input_img {
   display: flex;
@@ -269,7 +278,7 @@ main {
   border-width: 2px;
 }
 #profile .upload_img {
-  background-color: var(--dark2);
+  background-color: var(--light_green);
   border: var(--border);
   border-width: 2px;
   width: 100%;
@@ -283,8 +292,7 @@ main {
   cursor: pointer;
 }
 #profile .upload_img:hover {
-  background-color: var(--primary);
-  color: var(--dark0);
+  background-color: var(--light);
 }
 #profile .input_img input {
   display: none;
@@ -309,13 +317,10 @@ main {
   background-color: transparent;
   border-radius: 0.3rem;
   cursor: pointer;
-  color: var(--primary);
-  border: none;
-  background-color: var(--dark2);
 }
 #profile .action:hover {
-  background-color: var(--primary);
-  color: var(--dark0);
+  background-color: var(--green2) !important;
+  border-color: var(--green2);
 }
 #profile .cancel:hover {
   background-color: crimson;

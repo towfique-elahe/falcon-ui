@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subscription - FALCON</title>
+    <title>Complain - FALCON</title>
     <link rel="shortcut icon" href="./pictures/favicon.svg" type="image/x-icon">
     <!-- stylesheets -->
     <link rel="stylesheet" href="./style/style.css">
@@ -36,7 +36,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="./subsciption.html" class="active">
+                            <a href="./subsciption.html">
                                 <img src="./pictures/subscription-icon.svg" alt=""> <span>Subscription</span>
                             </a>
                         </li>
@@ -51,7 +51,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="./complain.html">
+                            <a href="./complain.html" class="active">
                                 <img src="./pictures/complain.svg" alt=""> <span>Complain</span>
                             </a>
                         </li>
@@ -72,8 +72,8 @@
             <!-- topbar -->
             <section id="topbar">
                 <div class="breadcrumb">
-                    <h1 class="page_title">subscription details</h1>
-                    <p class="msg">hey john! here is subscription details 😊</p>
+                    <h1 class="page_title">Complain</h1>
+                    <p class="msg">hey john! here you can Complain to falcon ⚠️</p>
                 </div>
                 <div class="user">
                     <a href="./profile.html">
@@ -82,48 +82,34 @@
                 </div>
             </section>
 
-            <!-- subscription content -->
-            <main id="subscription">
-                <div class="card_container">
-                    <div class="card plan">
-                        <h3 class="plan_name">Basic</h3>
-                        <div>
-                            <p>Started <span>10 Nov, 2022</span></p>
-                            <p>Ends <span>10 Dec, 2022</span></p>
-                            <a href="./plans.html">
-                                <span>Change Plan</span>
-                            </a>
-                        </div>
+            <!-- Complain content -->
+            <main id="complain">
+                <form action="" method="post" enctype="multipart/form-data" class="complain_card">
+                    <div class="input">
+                        <label for="user_id">User Id</label>
+                        <input type="text" name="user_id" id="user_id" value="flu234" disabled required>
                     </div>
-
-                    <div class="card">
-                        <h3 class="heading">Details</h3>
-                        <table>
-                            <tr>
-                                <td>
-                                    Subscription Id: <span>fls356</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="plan_speed">Speed: <span>15 mbps</span></td>
-                            </tr>
-                            <tr>
-                                <td>15 mbps speed / Off-Peak</td>
-                            </tr>
-                            <tr>
-                                <td>10 mbps speed / Peak</td>
-                            </tr>
-                            <tr>
-                                <td>24/7 Support</td>
-                            </tr>
-                            <tr>
-                                <td class="plan_price">৳ <span>800</span> /month</td>
-                            </tr>
-                        </table>
+                    <div class="input">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" value="John Wick" disabled required>
                     </div>
-                </div>
+                    <div class="input">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" value="johnwick@gmail.com" disabled required>
+                    </div>
+                    <div class="input">
+                        <label for="complain">Complain</label>
+                        <textarea name="complain" id="complain" placeholder="Share your complain with falcon 🙂"
+                            required autofocus></textarea>
+                    </div>
+                    <hr>
+                    <div class="buttons">
+                        <button class="button cancel" type="reset">Cancel</button>
+                        <button class="button action" type="submit">Submit</button>
+                    </div>
+                </form>
 
-                <img src="./pictures/subscription_illustration.svg" alt="" class="illustration">
+                <img class="illustration" src="./pictures/complain_illustration.svg" alt="">
             </main>
 
             <!-- footer -->
@@ -134,9 +120,9 @@
         <!-- main section ends here -->
     </div>
 
-
     <!-- tidio chatbot -->
     <script src="//code.tidio.co/twbspc6mnupjw5gibhskqpaqoiimscra.js" async></script>
+    <script src="../js/modal.js"></script>
 </body>
 
 </html>
