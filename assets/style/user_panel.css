@@ -654,18 +654,37 @@ table .action img {
 #transactions .transaction_table td {
   text-align: center;
 }
-#transactions tr {
+#transactions .transaction_table tr {
   background-color: transparent;
   border: none;
   border-bottom: var(--border);
   border-width: 2px;
   cursor: default;
 }
-#transactions tr:last-child {
+#transactions .transaction_table tr:last-child {
   border: none;
 }
-#transactions tr:hover {
+#transactions .transaction_table tr:hover {
   background-color: var(--light_green);
+}
+#transactions .transaction_modal tr:last-child {
+  border-bottom: solid 2px black;
+}
+#transactions .transaction_modal tr:hover {
+  background: none;
+  box-shadow: none;
+}
+#transactions .transaction_modal hr {
+  border-color: black;
+}
+#transactions .transaction_modal tr td:first-child {
+  font-weight: 600;
+}
+#transactions .pricing tr:last-child {
+  border-bottom: none;
+}
+#transactions .pricing td {
+  padding: 0.4rem 0.5rem;
 }
 /* transactions ends here */
 
@@ -1037,7 +1056,7 @@ table .action img {
 }
 
 .modal {
-  width: 100%;
+  width: 95%;
   max-width: 40rem;
   background-color: var(--light_green);
   border-radius: 1rem;

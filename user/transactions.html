@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transactions - FALCON</title>
-    <link rel="shortcut icon" href="./pictures/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/pictures/favicon.svg" type="image/x-icon">
     <!-- stylesheets -->
-    <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./style/responsive.css">
+    <link rel="stylesheet" href="/assets/style/user_panel.css">
+    <link rel="stylesheet" href="/assets/style/user_responsive.css">
 </head>
 
 <body>
@@ -17,42 +17,42 @@
         <!-- sidebar starts here -->
         <aside id="sidebar">
             <div class="sidebar_top">
-                <a href="./dashboard.html"><img src="./pictures/logo-light.svg" alt="" class="logo"></a>
+                <a href="./dashboard.html"><img src="/assets/pictures/logo-light.svg" alt="" class="logo"></a>
                 <nav>
                     <ul>
                         <li>
                             <a href="./dashboard.html">
-                                <img src="./pictures/dashboard-icon.svg" alt=""> <span>Dashboard</span>
+                                <img src="/assets/pictures/dashboard-icon.svg" alt=""> <span>Dashboard</span>
                             </a>
                         </li>
                         <li>
                             <a href="./profile.html">
-                                <img src="./pictures/profile-icon.svg" alt=""> <span>Profile</span>
+                                <img src="/assets/pictures/profile-icon.svg" alt=""> <span>Profile</span>
                             </a>
                         </li>
                         <li>
                             <a href="./connection.html">
-                                <img src="./pictures/connection-icon.svg" alt=""> <span>Connection</span>
+                                <img src="/assets/pictures/connection-icon.svg" alt=""> <span>Connection</span>
                             </a>
                         </li>
                         <li>
                             <a href="./subsciption.html">
-                                <img src="./pictures/subscription-icon.svg" alt=""> <span>Subscription</span>
+                                <img src="/assets/pictures/subscription-icon.svg" alt=""> <span>Subscription</span>
                             </a>
                         </li>
                         <li>
                             <a href="./dues.html">
-                                <img src="./pictures/dues-icon.svg" alt=""> <span>Dues</span>
+                                <img src="/assets/pictures/dues-icon.svg" alt=""> <span>Dues</span>
                             </a>
                         </li>
                         <li>
-                            <a href="transactions.html" class="active">
-                                <img src="./pictures/transactions-icon.svg" alt=""> <span>Transactions</span>
+                            <a href="./transactions.html" class="active">
+                                <img src="/assets/pictures/transactions-icon.svg" alt=""> <span>Transactions</span>
                             </a>
                         </li>
                         <li>
                             <a href="./complain.html">
-                                <img src="./pictures/complain.svg" alt=""> <span>Complain</span>
+                                <img src="/assets/pictures/complain.svg" alt=""> <span>Complain</span>
                             </a>
                         </li>
                     </ul>
@@ -60,8 +60,8 @@
             </div>
 
             <div class="sidebar_bottom">
-                <a href="../login.html">
-                    <img src="./pictures/logout-icon.svg" alt=""> <span>Logout</span>
+                <a href="/login.html">
+                    <img src="/assets/pictures/logout-icon.svg" alt=""> <span>Logout</span>
                 </a>
             </div>
         </aside>
@@ -77,7 +77,7 @@
                 </div>
                 <div class="user">
                     <a href="./profile.html">
-                        <img src="./pictures/john-wick.jpg" alt="" class="user_image">
+                        <img src="/assets/pictures/john-wick.jpg" alt="" class="user_image">
                     </a>
                 </div>
             </section>
@@ -86,7 +86,7 @@
             <main id="transactions">
                 <div class="transaction_table">
                     <h3 class="table_title">
-                        <img src="./pictures/transactions-icon.svg" alt="">
+                        <img src="/assets/pictures/transactions-icon.svg" alt="">
                         recent transactions
                     </h3>
                     <table>
@@ -107,7 +107,7 @@
                                 <td>03 oct, 2022</td>
                                 <td>
                                     <a href="javascript:void()" class="action" onclick="modalOpen()">
-                                        <img src="./pictures/detials_icon.svg" alt="">
+                                        <img src="/assets/pictures/detials_icon.svg" alt="">
                                     </a>
                                 </td>
                             </tr>
@@ -115,20 +115,21 @@
                     </table>
                 </div>
 
+                <!-- transaction modal -->
                 <div class="modal_container" id="modal">
                     <div class="modal invoice">
                         <div class="modal_top">
                             <h3 class="modal_heading">Invoice Id: 001</h3>
                             <a href="javascript:void()" onclick="modalClose()" class="modal_close">
-                                <img src="./pictures/close.svg" alt="">
+                                <img src="/assets/pictures/close.svg" alt="">
                             </a>
                         </div>
                         <hr>
                         <div class="transaction_modal">
                             <div class="brand">
-                                <img src="./pictures/logo-light.svg" alt="" class="logo">
+                                <img src="/assets/pictures/logo-light.svg" alt="" class="logo">
                             </div>
-                            <table>
+                            <table class="invoice_info">
                                 <tr>
                                     <td>User Name:</td>
                                     <td>John</td>
@@ -158,6 +159,20 @@
                                     <td>10 Dec, 2022</td>
                                 </tr>
                             </table>
+                            <table class="pricing">
+                                <tr>
+                                    <td>Subtotal</td>
+                                    <td>৳ <span>800</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Vat (10%)</td>
+                                    <td>৳ <span>80</span></td>
+                                </tr>
+                                <tr class="price">
+                                    <td>Total</td>
+                                    <td>৳ <span>880</span></td>
+                                </tr>
+                            </table>
                         </div>
                         <a href="javascript:void()" onclick="window.print()" class="print">Print Invoice</a>
                     </div>
@@ -174,7 +189,8 @@
 
     <!-- tidio chatbot -->
     <script src="//code.tidio.co/twbspc6mnupjw5gibhskqpaqoiimscra.js" async></script>
-    <script src="../js/modal.js"></script>
+    <!-- modal js -->
+    <script src="/assets/js/modal.js"></script>
 </body>
 
 </html>
