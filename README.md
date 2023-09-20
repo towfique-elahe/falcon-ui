@@ -37,5 +37,5 @@ This project is licensed under the [MIT License](https://choosealicense.com/lice
 
 
 <p align="center">
-  © 2023 Towfique Elahe. All rights reserved.
+  © 2022 Towfique Elahe. All rights reserved.
 </p>
